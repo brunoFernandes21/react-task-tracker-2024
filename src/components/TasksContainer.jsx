@@ -22,29 +22,29 @@ const TasksContainer = ({ tasks, setTasks }) => {
   };
 
   return (
-    <main className="mt-20 relative">
-      <section className="flex items-center mb-10 gap-8">
+    <main className="mt-20 border">
+      <section className="flex items-center gap-8 mb-10">
 
         <button
           onClick={sortByTaskName}
-          className="group relative flex items-center gap-2 text-gray-500 ml-4"
+          className="group relative w-[170px] flex items-center gap-2 text-gray-500 ml-4"
         >
-          <span
-            className="absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-24 "
-          >SortByTaskName</span>
           <FaFolder />
           <span className="text-gray-500 px-2 py-1">by task name</span>
+          <span
+            className=" absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-20"
+          >Sort By Task Name</span>
         </button>
 
         <button
           onClick={sortByPersonName}
-          className="group relative flex items-center gap-2 text-gray-500 ml-4"
+          className=" group relative w-[190px] flex items-center gap-2 text-gray-500 border"
         >
           <span
-            className="absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-24 "
-          >SortByPersonName</span>
+            className="absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-20 "
+          >Sort By Person Name</span>
           <FaUser />
-          <span className="text-gray-500 px-2 py-1">by task name</span>
+          <span className="text-gray-500 px-2 py-1">by person</span>
         </button>
 
       </section>
