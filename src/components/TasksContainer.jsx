@@ -8,7 +8,6 @@ const TasksContainer = ({ tasks, setTasks }) => {
       //One way of sorting string in ASC
       return a.title < b.title ? -1 : 1;
     });
-
     setTasks([...sortedTasks]);
   };
 
@@ -19,36 +18,35 @@ const TasksContainer = ({ tasks, setTasks }) => {
         return a.person.localeCompare(b.person);
       }
     });
-
     setTasks([...sortedTasks]);
   };
 
   return (
-    <main className="mt-20">
-      <section className="flex items-center mb-10 gap-8 ml-4">
+    <main className="mt-20 relative">
+      <section className="flex items-center mb-10 gap-8">
+
         <button
           onClick={sortByTaskName}
-          data-tooltip-target="tooltip-default" type="button"
-          className="flex items-center gap-2 text-gray-500"
+          className="group relative flex items-center gap-2 text-gray-500 ml-4"
         >
+          <span
+            className="absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-24 "
+          >SortByTaskName</span>
           <FaFolder />
-          <span>Sort by task name</span>
+          <span className="text-gray-500 px-2 py-1">by task name</span>
         </button>
-        <div
-          id="tooltip-default"
-          role="tooltip"
-          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-        >
-          Tooltip content
-          <div className="tooltip-arrow" data-popper-arrow></div>
-        </div>
+
         <button
           onClick={sortByPersonName}
-          className="flex items-center gap-2 text-gray-500"
+          className="group relative flex items-center gap-2 text-gray-500 ml-4"
         >
+          <span
+            className="absolute group-hover:opacity-90 transition-opacity bg-gray-700 text-white px-4 py-1 rounded opacity-0 mb-24 "
+          >SortByPersonName</span>
           <FaUser />
-          <span>Sort by person name</span>
+          <span className="text-gray-500 px-2 py-1">by task name</span>
         </button>
+
       </section>
       {tasks.map((task) => (
         <Task key={task.id} task={task} />
