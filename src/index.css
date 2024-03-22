@@ -13,10 +13,10 @@
 
 :root {
   /* General  */
-  --all-headings: "Outfit", sans-serif;
+  --font-family: "Outfit", sans-serif;
   /* --heading-color: #0000; */
   --paragraph: "Roboto", sans-serif;
-  --body-background: #ffffff;
+  --body-background: #eae9e9;
   --text-sizing: 16px;
 
   /* MOBILE  */
@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: var(--paragraph);
+  font-family: var(--font-family);
   background: var(--body-background);
   font-size: var(--text-sizing);
 }
@@ -41,17 +41,40 @@ body {
   max-width: 1065px;
   margin: 0 auto;
   padding: 0px 40px 40px 0px;
-
 }
 
 nav {
-    box-shadow: 0px 0px 4px 4px rgba(209, 207, 207, 0.2);
-    
+  box-shadow: 0px 0px 4px 4px rgba(209, 207, 207, 0.2);
 }
-nav > h1 {
-    font-family: var(--all-headings);
-    font-size: 25px;
+
+nav {
+  font-size: 25px;
 }
+
+nav > ul {
+  font-size: 18px;
+}
+
+.task.complete {
+  border-left: 4px solid #3cd1c2;
+}
+.chip.complete {
+  background: #40c4b7;
+}
+.task.ongoing {
+  border-left: 4px solid orange;
+}
+.chip.ongoing {
+  background: orange;
+}
+.task.overdue {
+  border-left: 4px solid tomato;
+}
+.chip.overdue {
+  background: orangered;
+}
+
+
 
 /* .task__container {
     max-width: 500px;
