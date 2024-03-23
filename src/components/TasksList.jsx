@@ -10,7 +10,7 @@ export const allTasks = [
       id: 2,
       person: "Danny",
       title: "Landing Page",
-      due: "5th March",
+      due: "5th Mar",
       status: "ongoing",
     },
     {
