@@ -36,12 +36,12 @@ body {
 
 /* DESKTOP STYLYING  */
 
-.main__content {
+/* .main__content {
   width: 1440px;
   max-width: 1065px;
   margin: 0 auto;
   padding: 0px 40px 40px 0px;
-}
+} */
 
 nav {
   box-shadow: 0px 0px 4px 4px rgba(209, 207, 207, 0.2);

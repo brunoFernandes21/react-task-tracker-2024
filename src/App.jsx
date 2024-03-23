@@ -1,45 +1,31 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import TasksContainer from "./components/TasksContainer";
+import Dashboard from "./pages/Dashboard";
+import Tasks from "./pages/Tasks";
+import Team from "./pages/Team"
+import MyTasks from "./pages/MyTasks";
+import NewTask from "./pages/NewTask";
+import { allTasks } from "../src/components/TasksList"
+import { Route, Routes } from 'react-router-dom';
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      person: "Tyler",
-      title: "Mobile Navigation",
-      due: "5th March",
-      status: "complete",
-    },
-    {
-      id: 2,
-      person: "Danny",
-      title: "Landing Page",
-      due: "27th Feb",
-      status: "ongoing",
-    },
-    {
-      id: 3,
-      person: "Bruno",
-      title: "Sign up form",
-      due: "25th Jan",
-      status: "complete",
-    },
-    {
-      id: 4,
-      person: "Raphael",
-      title: "User authentication",
-      due: "10th Feb",
-      status: "overdue",
-    },
-  ]);
+  const [tasks, setTasks] = useState(allTasks);
   return (
-    <main>
+    <div>
       <Header />
       <section className="px-5 md:max-w-[1200px] text-slate-800 m-auto">
-        <TasksContainer tasks={tasks} setTasks={setTasks} />
+        <Routes>
+          <Route path="/" element={<Dashboard tasks={tasks} setTasks={setTasks}/>}/>
+          <Route path="/new-task" element={<NewTask/>}/>
+          <Route path="/my-tasks" element={<MyTasks/>}/>
+          <Route path="/tasks" element={<Tasks/>}/>
+          <Route path="/team" element={<Team/>}/>
+          <Route path="/landing-page" element={<LandingPage/>}/>
+        </Routes>
+        
       </section>
-    </main>
+    </div>
   );
 };
 
