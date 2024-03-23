@@ -27,4 +27,11 @@ export const allTasks = [
       due: "10th Feb",
       status: "overdue",
     },
+    {
+      id: 5,
+      person: "Bruno",
+      title: "Home Page Design",
+      due: "10th April",
+      status: "ongoing",
+    },
   ]

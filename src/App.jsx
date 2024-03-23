@@ -18,7 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard tasks={tasks} setTasks={setTasks}/>}/>
           <Route path="/new-task" element={<NewTask/>}/>
-          <Route path="/my-tasks" element={<MyTasks/>}/>
+          <Route path="/my-tasks" element={<MyTasks tasks={tasks} setTasks={setTasks}/>}/>
           <Route path="/tasks" element={<Tasks tasks={tasks}/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/landing-page" element={<LandingPage/>}/>
