@@ -55,19 +55,19 @@ nav > ul {
   font-size: 18px;
 }
 
-.task.complete {
+.project.complete {
   border-left: 4px solid #3cd1c2;
 }
 .chip.complete {
   background: #40c4b7;
 }
-.task.ongoing {
+.project.ongoing {
   border-left: 4px solid orange;
 }
 .chip.ongoing {
   background: orange;
 }
-.task.overdue {
+.project.overdue {
   border-left: 4px solid tomato;
 }
 .chip.overdue {

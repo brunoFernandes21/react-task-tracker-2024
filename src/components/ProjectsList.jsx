@@ -1,4 +1,4 @@
-export const allTasks = [
+export const allProjects = [
     {
       id: 1,
       person: "Tyler",

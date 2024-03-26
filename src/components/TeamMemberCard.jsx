@@ -4,7 +4,7 @@ const TeamMemberCard = ({ person }) => {
   return (
     <section className="bg-white text-black shadow-md rounded-lg ease-in duration-300 hover:scale-105 p-4 ">
       <section className="text-center ">
-        <img className="inline-block h-[90px] w-[90px] rounded-full border-4 border-gray-300" src={`${person.avatar}`} alt={`pic of ${ person.name }`} />
+        <img className="inline-block h-[110px] w-[110px] rounded-full border-4 border-gray-300" src={`${person.avatar}`} alt={`pic of ${ person.name }`} />
       </section>
       <section>
         <div className="text-center pt-4"> {person.name}</div>
