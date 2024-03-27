@@ -35,7 +35,7 @@ const Header = () => {
 
         {/* menu content  */}
       {showMenuContent && (
-        <div className="bg-white absolute z-20 md:right-[112px] lg:right-[232px] top-[50px]  p-3 rounded ">
+        <div className="bg-white absolute z-20 md:right-[112px] lg:right-[232px] top-[50px]  p-3 rounded">
           <ul className=" flex flex-col gap-4 divide-y-2 p-2">
             <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center gap-2 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out">
             <MdDashboard />

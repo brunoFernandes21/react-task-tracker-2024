@@ -1,3 +1,4 @@
+
 const Project = ({ project }) => {
   return (
     <main className={`grid grid-cols-6 mt-1 bg-gray-100 p-5 rounded project ${project.status} divide-`}>
