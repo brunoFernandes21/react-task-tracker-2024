@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Project from "../components/Project";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
-const MyProjects = ({ projects, setProjects }) => {
+const MyProjects = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   //   const filteredProjects = projects.filter((project) => {
   //     return project.person === "Bruno"

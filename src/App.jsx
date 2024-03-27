@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
-import Projects from "./features/projects/Projects";
 import Team from "./pages/Team"
 import MyProjects from "./pages/MyProjects";
 import NewProject from "./pages/NewProject";
@@ -16,10 +15,10 @@ const App = () => {
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/new-project" element={<NewProject/>}/>
           <Route path="/my-projects" element={<MyProjects/>}/>
-          <Route path="/projects" element={<Projects/>}/>
           <Route path="/team" element={<Team/>}/>
           <Route path="/landing-page" element={<LandingPage/>}/>
         </Routes>
+        
       </section>
     </div>
   );

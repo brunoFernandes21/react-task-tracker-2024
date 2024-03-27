@@ -1,17 +1,17 @@
-import { createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { allProjects } from "../../components/ProjectsData";
 
-
-const initialState = allProjects
+const initialState = allProjects;
 
 const projectsSlice = createSlice({
-    name: 'projects',
-    initialState,
-    reducers: {
+  name: "projects",
+  initialState,
+  reducers: {
+    postAdded(state, action) {
+      state.push(action.payload);
+    },
+  },
+});
 
-    }
-})
-
-
-// export const {} =  postsSlice.actions
-export default projectsSlice.reducer
+export const { postAdded } =  projectsSlice.actions
+export default projectsSlice.reducer;
