@@ -8,7 +8,7 @@ import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
-    <div>
+    <div className="mb-20">
       <Header />
       <section className="px-5 md:max-w-[1200px] text-slate-800 m-auto">
         <Routes>
@@ -18,7 +18,6 @@ const App = () => {
           <Route path="/team" element={<Team/>}/>
           <Route path="/landing-page" element={<LandingPage/>}/>
         </Routes>
-        
       </section>
     </div>
   );

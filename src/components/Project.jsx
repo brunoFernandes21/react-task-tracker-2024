@@ -1,3 +1,4 @@
+import ProjectAuthor from '../features/projects/ProjectAuthor'
 
 const Project = ({ project }) => {
   return (
@@ -7,8 +8,8 @@ const Project = ({ project }) => {
         <div>{project.title}</div>
       </section>
       <section className="sm:col-span-3 md:col-span-1">
-        <div className="text-lg text-slate-400">Person</div>
-        <div>{project.person}</div>
+        <div className="text-lg text-slate-400">Assigned to</div>
+        <ProjectAuthor memberId={project.memberId}/>
       </section>
       <section className="sm:col-span-3 md:col-span-1">
         <div className="text-lg text-slate-400">Due by</div>
