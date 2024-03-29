@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import { postAdded } from "./projectsSlice";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectAllMembers } from "../teamMembers/teamMembersSlice";
 
 export const AddProjectForm = () => {
