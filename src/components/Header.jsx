@@ -35,21 +35,21 @@ const Header = () => {
 
         {/* menu content  */}
       {showMenuContent && (
-        <div className="bg-white absolute z-20 md:right-[112px] lg:right-[232px] top-[50px]  p-3 rounded">
-          <ul className=" flex flex-col gap-4 divide-y-2 p-2">
-            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center gap-2 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out">
+        <div className="bg-white absolute z-20 md:right-[112px] lg:right-[232px] top-[50px] rounded">
+          <ul className=" flex flex-col gap-4 divide-y-2 py-2">
+            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center gap-2 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out px-4">
             <MdDashboard />
               <Link to="/" className="text-[18px]">Dashboard</Link>
             </li>
             
-            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center pt-4 gap-2 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out">
+            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center pt-4 gap-2 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out px-4">
             <FaFolder />
               <Link to="/my-projects" className="text-[18px]">My Projects</Link>
             </li>
             {/* <li onClick={() => setShowMenuContent(!showMenuContent)} className="font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out">
               <Link to="/projects" className="text-[18px]">All Projects</Link>
             </li> */}
-            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center gap-2 pt-4 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out">
+            <li onClick={() => setShowMenuContent(!showMenuContent)} className="flex items-center gap-2 pt-4 font-semibold cursor-pointer hover:text-slate-700 transition-all ease-in-out px-4">
             <FaUsers />
               <Link to="/team" className="text-[18px]">Team</Link>
             </li>

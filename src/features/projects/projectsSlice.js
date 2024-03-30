@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from "@reduxjs/toolkit";
+import { sub } from "date-fns";
+
 
 const initialState = [
   {
@@ -8,6 +10,7 @@ const initialState = [
     title: "Mobile Navigation",
     due: "27th Feb",
     status: "complete",
+    date: sub(new Date(), { minutes: 12 }).toISOString(),
     memberId: '2'
   },
   {
@@ -16,6 +19,7 @@ const initialState = [
     title: "Landing Page",
     due: "5th Mar",
     status: "ongoing",
+    date: sub(new Date(), { minutes: 20 }).toISOString(),
     memberId: '4'
   },
   {
@@ -24,6 +28,7 @@ const initialState = [
     title: "Sign up form",
     due: "25th Jan",
     status: "complete",
+    date: sub(new Date(), { minutes: 15 }).toISOString(),
     memberId: '1'
   },
   {
@@ -32,6 +37,7 @@ const initialState = [
     title: "User authentication",
     due: "10th Feb",
     status: "overdue",
+    date: sub(new Date(), { minutes: 10 }).toISOString(),
     memberId: '3'
   },
   {
@@ -40,6 +46,7 @@ const initialState = [
     title: "Home Page Design",
     due: "10th April",
     status: "ongoing",
+    date: sub(new Date(), { minutes: 5 }).toISOString(),
     memberId: '1'
   },
 ];
@@ -56,6 +63,7 @@ const projectsSlice = createSlice({
           payload: {
             id: nanoid(),
             title,
+            date: new Date().toISOString(),
             due,
             status,
             memberId,
@@ -64,23 +72,24 @@ const projectsSlice = createSlice({
       },
     },
     sortByTaskName(state, action) {
-      return action.payload.map((payloadItem) => {
+      const sortedState =  action.payload.map((payloadItem) => {
         let existingItem = state.find((item) => item.id === payloadItem.id)
         if(existingItem) {
           existingItem = payloadItem
         }
         return existingItem
       })
+      return sortedState
     },
     sortByMemberName(state, action) {
-      console.log(action.payload);
-      return action.payload.map((payloadItem) => {
+      const sortedState =  action.payload.map((payloadItem) => {
         let existingItem = state.find((item) => item.id === payloadItem.id)
         if(existingItem) {
           existingItem = payloadItem
         }
         return existingItem
       })
+      return sortedState
     }
 
   },

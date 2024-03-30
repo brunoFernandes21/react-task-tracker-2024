@@ -1,15 +1,20 @@
 import ProjectAuthor from '../features/projects/ProjectAuthor'
+import { TimeAgo } from '../features/projects/TimeAgo';
 
 const Project = ({ project }) => {
   return (
-    <main className={`grid grid-cols-6 mt-1 bg-gray-100 p-5 rounded project ${project.status} divide-`}>
+    <main className={`grid grid-cols-6 mt-1 bg-gray-100 p-5 rounded project ${project.status}`}>
       <section className=" col-span-6 md:col-span-3">
         <div className="text-lg text-slate-400">Project title</div>
-        <div>{project.title}</div>
+        <div >
+          {project.title}
+        </div>
+       
       </section>
       <section className="sm:col-span-3 md:col-span-1">
         <div className="text-lg text-slate-400">Assigned to</div>
         <ProjectAuthor memberId={project.memberId}/>
+        <TimeAgo timestamp={project.date}/>
       </section>
       <section className="sm:col-span-3 md:col-span-1">
         <div className="text-lg text-slate-400">Due by</div>
